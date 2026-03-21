@@ -1,5 +1,3 @@
-Sure! Let's walk through a realistic full-stack project — a simple React frontend + Node/Express backend + PostgreSQL database.
-
 **Assumed setup:** WebStorm, Docker Desktop running, Node.js installed locally.
 
 ---
@@ -8,8 +6,8 @@ Sure! Let's walk through a realistic full-stack project — a simple React front
 
 Open Windows Terminal:
 ```bash
-mkdir my-project
-cd my-project
+mkdir docker-project
+cd docker-project
 mkdir frontend backend
 ```
 
@@ -62,7 +60,7 @@ Add to `backend/package.json` scripts:
 **Step 4 — Create docker-compose.yml at the root**
 
 ```bash
-cd my-project
+cd docker-project
 ```
 
 Create `docker-compose.yml`:
@@ -103,11 +101,11 @@ services:
 
 volumes:
   pgdata:
-```
 
-Your folder structure should now look like this:
 ```
-my-project/
+Folder structure should now look like this:
+```
+docker-project/
 ├── docker-compose.yml
 ├── frontend/
 │   ├── src/
@@ -122,7 +120,7 @@ my-project/
 
 **Step 5 — Open in WebStorm and spin up**
 
-Open WebStorm → Open folder → select `my-project`. Then in terminal:
+Open WebStorm → Open folder → select `docker-project`. Then in terminal:
 
 ```bash
 docker compose up
@@ -199,7 +197,7 @@ Your PostgreSQL data survives because it's stored in the `pgdata` named volume, 
 They just need Docker Desktop installed, then:
 ```bash
 git clone your-repo
-cd my-project
+cd docker-project
 docker compose up
 ```
 
